@@ -1,0 +1,9 @@
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\bin\Debug\FacturoPorTi.CFDI.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\bin\Debug\FacturoPorTi.CFDI.pdb
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\bin\Debug\Newtonsoft.Json.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\bin\Debug\Newtonsoft.Json.xml
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\obj\Debug\FacturoPorTi.CFDI.csproj.CoreCompileInputs.cache
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\obj\Debug\FacturoPorTi.CFDI.csproj.CopyComplete
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\obj\Debug\FacturoPorTi.CFDI.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.CFDI\obj\Debug\FacturoPorTi.CFDI.pdb

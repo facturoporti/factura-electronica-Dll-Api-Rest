@@ -1,0 +1,13 @@
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\obj\Release\FacturoPorTi.Tester.csprojAssemblyReference.cache
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\obj\Release\FacturoPorTi.Tester.csproj.CoreCompileInputs.cache
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\FacturoPorTi.Tester.exe.config
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\FacturoPorTi.Tester.exe
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\FacturoPorTi.Tester.pdb
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\BouncyCastle.Crypto.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\FacturoPorTi.CFDI.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\Newtonsoft.Json.dll
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\FacturoPorTi.CFDI.pdb
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\bin\Release\Newtonsoft.Json.xml
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\obj\Release\FacturoPorTi.Tester.csproj.CopyComplete
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\obj\Release\FacturoPorTi.Tester.exe
+C:\Alejandro\Pruebas\InterfacesCFDI\FacturoPorTi.Tester\obj\Release\FacturoPorTi.Tester.pdb
