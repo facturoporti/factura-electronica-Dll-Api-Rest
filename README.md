@@ -470,7 +470,7 @@ En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoport
 
 2. Clona el repositorio
 
-    git clone git@github.com:yourUserName/factura-electronica-dll.git
+    git clone git@github.com:yourUserName/factura-electronica-Dll-Api-Rest.git
 
 3. Crea una rama 
 ```
