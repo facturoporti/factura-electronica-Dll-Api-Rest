@@ -493,5 +493,5 @@ En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoport
 
 ## License
 
-Desarrollado en México por [FacturoPorTi](https://www.FacturoPorTi.com). Available with [MIT License](LICENSE).
+Desarrollado en México por [FacturoPorTi](https://www.FacturoPorTi.com.mx). Available with [MIT License](LICENSE).
 ****
