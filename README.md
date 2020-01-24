@@ -34,7 +34,7 @@ Obten la última versión de la librería de  timbrado de FacturoPorTi  en** NuG
 **
 [FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.CFDI "FacturoPorTi.CFDI")**
 
-En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-dll "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas  pruebas con el.  
+En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas  pruebas con el.  
 
 ## Timbrar
 
