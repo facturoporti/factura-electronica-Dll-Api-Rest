@@ -182,8 +182,8 @@ using FacturoPorTi.Api.Cfdi.Genericos;
 
             concepto.Cantidad = "1";
             concepto.CodigoUnidad = "E48"; // Se agrega la clave de acuerdo al catálogo del SAT http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/catCFDI.xls
-                                           //concepto.Unidad = "Pieza"; // Este es un valor opcional 
-                                           //concepto.Serie = ""; // Este es un valor opcional se agregan numero de series, partes, etc.
+            //concepto.Unidad = "Pieza"; // Este es un valor opcional 
+            //concepto.Serie = ""; // Este es un valor opcional se agregan numero de series, partes, etc.
             concepto.CodigoProducto = "53112101";// Se agrega la clave de acuerdo al catálogo del SAT http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/catCFDI.xls
             concepto.Producto = "Zapatos de caballero marca patito";
             concepto.PrecioUnitario = "1000";
@@ -263,7 +263,7 @@ using FacturoPorTi.Api.Cfdi.Genericos;
 
             #region "Realiza el Timbrado"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             //Para el ejercicio se usan los certificados de prueba del SAT
@@ -300,7 +300,6 @@ using FacturoPorTi.Api.Cfdi.Genericos;
             #endregion "Realiza el Timbrado"
 
         }
-
  
 ```
 
@@ -321,16 +320,16 @@ La librería permite mandar uno o varios Folios Fiscales para cancelar al mismo 
         {
             CancelarCFDIPeticion Peticion = new CancelarCFDIPeticion();
 
-            Peticion.Usuario = "PruebasTimbrado"; // Este usuario se genera desde la pagina de https://cfdi.facturoporti.com.mx/ se debe de registrar para usar en el ambiente productivo
+            Peticion.Usuario = "PruebasTimbrado"; // Este usuario se genera desde la pagina de https://cfdi.facturoporti.com.mx/ se debe de registrar para usar el productivo
             Peticion.Password = "@Notiene1"; // Es la contraseña del usuario cuando se registró
             Peticion.RFC = "AAA010101AAA";
 
             Peticion.UUIDs = new List<string>();
-            Peticion.UUIDs.Add(UUID); // Aca se pueden agregar N folios fiscales
+            Peticion.UUIDs.Add(UUID);
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             //Para el ejercicio se usan los certificados de prueba del SAT
@@ -359,7 +358,6 @@ La librería permite mandar uno o varios Folios Fiscales para cancelar al mismo 
             #endregion "Realiza el Timbrado"
 
         }
-
 ```
 
 ## Probar Cancelación de CFDI
@@ -373,7 +371,7 @@ La librería permite consultar uno o varios Folios Fiscales para revisar el  est
 En ese lapso de 72 horas de manera automática se podrá actualizar el estatus del CFDI por lo que se requiere periodicamente consultar el servicio para validar el estatus actual del CFDI. No se recomienda hacerlo con una periodicidad menor a 1 hora ya que el SAT tarda de igual manera de 1 a 72 horas en ver reflejado el cambio de estatus. Asi que se sugiere que manden a llamar este servicio con un lapso mayor a 1 hora cada vez, antes de ese tiempo será en vano consultar el estatus del CFDI.
 
 ```csharp
- private static void ConsultarEstatusUUID()
+  private static void ConsultarEstatusUUID()
         {
             ConsultaEstatusPeticion Peticion = new ConsultaEstatusPeticion();
 
@@ -381,11 +379,11 @@ En ese lapso de 72 horas de manera automática se podrá actualizar el estatus d
             Peticion.Password = "@Notiene1"; // Es la contraseña del usuario cuando se registró
 
             Peticion.UUIDs = new List<string>();
-            Peticion.UUIDs.Add(UUID); // Aca se pueden agregar N folios fiscales
+            Peticion.UUIDs.Add(UUID);
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
             
             Console.WriteLine("Inicio de consulta " + DateTime.Now);
@@ -431,7 +429,7 @@ Como tenemos varios paquetes con características distintas en cuanto a uso y pr
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             Console.WriteLine("Inicio de consulta de timbres restantes " + DateTime.Now);
