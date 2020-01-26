@@ -24,9 +24,12 @@ Se recomienda usar el IDE de desarrollo Visual Studio 2015 o 2017 community o su
 
 La librería tiene como requerimientos: 
 
-- **.Net Framework 4.6.1 en adelante**
 - **Newtonsoft.Json 12.0.3 en adelante**
 - **Portable.BouncyCastle 1.8.5.2 en adelante**
+
+Además revisa la versión de framework que necesitas de acuerdo a tu proyecto:
+
+![alt text](FrameworkSupport.png)
 
 ## Instalación
 
