@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>FacturoPorTi.Api.Cfdi</PackageId>
+    <Version>3.0.4</Version>
+    <Authors>FacturoPorTi</Authors>
+    <Company>Scafandra Software Factory SA de CV</Company>
+    <Product>FacturoPorTi.Api.Cfdi</Product>
+    <Description>Librería en .Net Standard que permite generar cualquier tipo de Factura Electronica Xml y PDF (Ingreso, Egreso, Traslado, Nomina, Pago, etc.) llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos.
+
+Es ideal y compatible para integrarla en cualquier tipo de proyecto ya sean aplicaciones web, escritorio, moviles (Mono, Xamarin), SilverLight, WPF, .Net Core, Universal Windows Platform, Unity, etc. usa la librería directamente en el proyecto o agrega la referencia usando</Description>
+    <Copyright>Licencia MIT con derechos amplios de uso y reproduccion total o parcial de Scafandra Software Factory SA de CV</Copyright>
+    <PackageLicenseUrl>https://github.com/facturoporti/factura-electronica-Dll-Api-Rest/blob/master/Licencia</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/facturoporti/factura-electronica-Dll-Api-Rest</PackageProjectUrl>
+    <PackageIconUrl>https://www.facturoporti.com.mx/wp-content/uploads/2019/04/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/facturoporti/factura-electronica-Dll-Api-Rest</RepositoryUrl>
+    <RepositoryType>Proyecto Dll y ejemplo de implementacion</RepositoryType>
+    <PackageTags>Genera, Factura Electronica, Ingreso, Egreso, Traslado, Pago, Nomina, Dll, .Net, Api, Rest, Timbrado, Cancelacion, Servicio, .Net Core, Movil, Web, Xamarin, WPF, SilverLight, Mono,  Universal Windows Platform.</PackageTags>
+    <PackageReleaseNotes>Proyecto completo para generar CFDI, cancelar de libre uso</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.5.2" />
+  </ItemGroup>
+
+</Project>
