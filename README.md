@@ -2,21 +2,21 @@
 
 ![banner](GitHub.png)
 
-# Librería en C# para Timbrar y Cancelar CFDIs
+# Librería en .Net para Timbrar y Cancelar Facturas Electrónicas de cualquier tipo
 
 ![C# badge](subtitulo-badge.png)
 
 </div>
 
-Librería en C# que permite generar cualquier tipo de comprobante digital **(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
+Librería en **.Net Standard** que permite generar cualquier tipo de comprobante digital ** Ingreso, Egreso, Traslado, Nomina, Pago, etc.(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
 
-Es ideal para usar la librería directamente en el proyecto o agregando la referencia usando - [NuGet Package](https://www.nuget.org/packages/FacturoPorTi.CFDI)
+**Es ideal y compatible para integrarla en cualquier tipo de proyecto ya sean aplicaciones web, escritorio, moviles (Mono, Xamarin), silverligth, WPF, .Net Core, Universal Windows Platform, Unity, etc.** usa la librería directamente en el proyecto o agrega la referencia usando - [NuGet Package](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi)
 
-Con esta libería además podrás timbrar, cancelar CFDIs, obtener estatus del CFDI ante el SAT, consultar los timbres restantes entre otras cosas. 
+Con esta libería además podrás timbrar, cancelar, obtener estatus del CFDI ante el SAT, consultar los timbres restantes entre otras cosas. 
 
-No necesitas saber ninguna regla del SAT la librería generará  el XML de acuerdo al anexo 20, nosotros realizamos todo esto facilitando el proceso de integración de tu sistema y/o aplicación para cumplir con lo que solicita el SAT.
+No necesitas saber ninguna regla del SAT la librería generará el XML de acuerdo al anexo 20, la librería se encarga de todo  facilitando el proceso de integración de tu sistema y/o aplicación, servicio, para cumplir con lo que solicita el SAT.
 
-La librería es muy liviana y rápida por que utiliza llamadas Rest Api  permitirá generar tus CFDIs y enviar los por correo todo al mismo tiempo. 
+La librería es muy liviana y rápida, utiliza llamadas Rest Api que permitirá generar tus CFDIs y enviar los por correo todo al mismo tiempo. 
 
 ## Requerimientos
 
@@ -24,17 +24,17 @@ Se recomienda usar el IDE de desarrollo Visual Studio 2015 o 2017 community o su
 
 La librería tiene como requerimientos: 
 
-** .Net Framework 4.5 en adelante**
+** .Net Framework 4.6.1 en adelante**
 ** Newtonsoft.Json 12.0.3 en adelante**
-** BouncyCastle.Crypto 1.8.1 en adelante**
+** Portable.BouncyCastle 1.8.5.2 en adelante**
 
 ## Instalación
 
 Obten la última versión de la librería de  timbrado de FacturoPorTi  en** NuGet**:
 **
-[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.CFDI "FacturoPorTi.CFDI")**
+[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi "FacturoPorTi.Api.Cfdi")**
 
-En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas  pruebas con el.  
+En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas pruebas con el.  
 
 ## Timbrar
 
