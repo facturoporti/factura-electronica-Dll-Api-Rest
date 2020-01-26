@@ -52,9 +52,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using FacturoPorTi.CFDI;
-using FacturoPorTi.CFDI.Entidades;
-using FacturoPorTi.CFDI.Genericos;
+using FacturoPorTi.Api.Cfdi;
+using FacturoPorTi.Api.Cfdi.Entidades;
+using FacturoPorTi.Api.Cfdi.Genericos;
 
   private static void TimbrarDocumento()
         {
