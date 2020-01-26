@@ -2,21 +2,21 @@
 
 ![banner](GitHub.png)
 
-# Librería en C# para Timbrar y Cancelar CFDIs
+# Librería en .Net para Timbrar y Cancelar Facturas Electrónicas de cualquier tipo
 
 ![C# badge](subtitulo-badge.png)
 
 </div>
 
-Librería en C# que permite generar cualquier tipo de comprobante digital **(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
+Librería en **.Net Standard** que permite generar cualquier tipo de comprobante digital ** Ingreso, Egreso, Traslado, Nomina, Pago, etc.(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
 
-Es ideal para usar la librería directamente en el proyecto o agregando la referencia usando - [NuGet Package](https://www.nuget.org/packages/FacturoPorTi.CFDI)
+**Es ideal y compatible para integrarla en cualquier tipo de proyecto ya sean aplicaciones web, escritorio, moviles (Mono, Xamarin), silverligth, WPF, .Net Core, Universal Windows Platform, Unity, etc.** usa la librería directamente en el proyecto o agrega la referencia usando - [NuGet Package](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi)
 
-Con esta libería además podrás timbrar, cancelar CFDIs, obtener estatus del CFDI ante el SAT, consultar los timbres restantes entre otras cosas. 
+Con esta libería además podrás timbrar, cancelar, obtener estatus del CFDI ante el SAT, consultar los timbres restantes entre otras cosas. 
 
-No necesitas saber ninguna regla del SAT la librería generará  el XML de acuerdo al anexo 20, nosotros realizamos todo esto facilitando el proceso de integración de tu sistema y/o aplicación para cumplir con lo que solicita el SAT.
+No necesitas saber ninguna regla del SAT la librería generará el XML de acuerdo al anexo 20, la librería se encarga de todo  facilitando el proceso de integración de tu sistema y/o aplicación, servicio, para cumplir con lo que solicita el SAT.
 
-La librería es muy liviana y rápida por que utiliza llamadas Rest Api  permitirá generar tus CFDIs y enviar los por correo todo al mismo tiempo. 
+La librería es muy liviana y rápida, utiliza llamadas Rest Api que permitirá generar tus CFDIs y enviar los por correo todo al mismo tiempo. 
 
 ## Requerimientos
 
@@ -24,17 +24,16 @@ Se recomienda usar el IDE de desarrollo Visual Studio 2015 o 2017 community o su
 
 La librería tiene como requerimientos: 
 
-** .Net Framework 4.5 en adelante**
-** Newtonsoft.Json 12.0.3 en adelante**
-** BouncyCastle.Crypto 1.8.1 en adelante**
+- **.Net Framework 4.6.1 en adelante**
+- **Newtonsoft.Json 12.0.3 en adelante**
+- **Portable.BouncyCastle 1.8.5.2 en adelante**
 
 ## Instalación
 
-Obten la última versión de la librería de  timbrado de FacturoPorTi  en** NuGet**:
-**
-[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.CFDI "FacturoPorTi.CFDI")**
+Obten la última versión de la librería de  timbrado de FacturoPorTi  en **NuGet**:
+**[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi "FacturoPorTi.Api.Cfdi")**
 
-En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-dll "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas  pruebas con el.  
+En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas pruebas con el.  
 
 ## Timbrar
 
@@ -53,9 +52,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using FacturoPorTi.CFDI;
-using FacturoPorTi.CFDI.Entidades;
-using FacturoPorTi.CFDI.Genericos;
+using FacturoPorTi.Api.Cfdi;
+using FacturoPorTi.Api.Cfdi.Entidades;
+using FacturoPorTi.Api.Cfdi.Genericos;
 
   private static void TimbrarDocumento()
         {
@@ -183,8 +182,8 @@ using FacturoPorTi.CFDI.Genericos;
 
             concepto.Cantidad = "1";
             concepto.CodigoUnidad = "E48"; // Se agrega la clave de acuerdo al catálogo del SAT http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/catCFDI.xls
-                                           //concepto.Unidad = "Pieza"; // Este es un valor opcional 
-                                           //concepto.Serie = ""; // Este es un valor opcional se agregan numero de series, partes, etc.
+            //concepto.Unidad = "Pieza"; // Este es un valor opcional 
+            //concepto.Serie = ""; // Este es un valor opcional se agregan numero de series, partes, etc.
             concepto.CodigoProducto = "53112101";// Se agrega la clave de acuerdo al catálogo del SAT http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/catCFDI.xls
             concepto.Producto = "Zapatos de caballero marca patito";
             concepto.PrecioUnitario = "1000";
@@ -264,7 +263,7 @@ using FacturoPorTi.CFDI.Genericos;
 
             #region "Realiza el Timbrado"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             //Para el ejercicio se usan los certificados de prueba del SAT
@@ -301,17 +300,16 @@ using FacturoPorTi.CFDI.Genericos;
             #endregion "Realiza el Timbrado"
 
         }
-
  
 ```
 
 ## Probar Timbrado CFDI
 
-Si usas el proyecto con el código de ejemplo ** Ejecuta o depura la aplicación ** automáticamente se generará el Xml y PDF con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
+Si usas el proyecto con el código de ejemplo **Ejecuta o depura la aplicación** automáticamente se generará el Xml y PDF con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
 
 Revisa el objeto de respuesta CFDITimbradoRespuesta en el encontraras tanto el XML, PDF, timbre fiscal, estatus, errores, etc. **Todo codigo de error diferente de "000" indica algún tipo de error ** que se debe de revisar y corregir.
 
-Los atributos ** CFDIXML, TimbreXML y PDF estan en Base64 ** se deberán de convertir a texto para obtener el XML y/o timbre del CFDI, en el caso del PDF lo podrán guardar o convertir de manera binaria para obtener la representación impresa. Esto ya se hace en el proyecto de ejemplo.
+Los atributos **CFDIXML, TimbreXML y PDF estan en Base64** se deberán de convertir a texto para obtener el XML y/o timbre del CFDI, en el caso del PDF lo podrán guardar o convertir de manera binaria para obtener la representación impresa. Esto ya se hace en el proyecto de ejemplo.
 
 ## Cancelar
 
@@ -322,16 +320,16 @@ La librería permite mandar uno o varios Folios Fiscales para cancelar al mismo 
         {
             CancelarCFDIPeticion Peticion = new CancelarCFDIPeticion();
 
-            Peticion.Usuario = "PruebasTimbrado"; // Este usuario se genera desde la pagina de https://cfdi.facturoporti.com.mx/ se debe de registrar para usar en el ambiente productivo
+            Peticion.Usuario = "PruebasTimbrado"; // Este usuario se genera desde la pagina de https://cfdi.facturoporti.com.mx/ se debe de registrar para usar el productivo
             Peticion.Password = "@Notiene1"; // Es la contraseña del usuario cuando se registró
             Peticion.RFC = "AAA010101AAA";
 
             Peticion.UUIDs = new List<string>();
-            Peticion.UUIDs.Add(UUID); // Aca se pueden agregar N folios fiscales
+            Peticion.UUIDs.Add(UUID);
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             //Para el ejercicio se usan los certificados de prueba del SAT
@@ -360,12 +358,11 @@ La librería permite mandar uno o varios Folios Fiscales para cancelar al mismo 
             #endregion "Realiza el Timbrado"
 
         }
-
 ```
 
 ## Probar Cancelación de CFDI
 
-Si usas el proyecto con el código de ejemplo ** Ejecuta o depura la aplicación ** automáticamente se enviará la cancelación con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
+Si usas el proyecto con el código de ejemplo **Ejecuta o depura la aplicación** automáticamente se enviará la cancelación con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
 
 ## Consultar Estatus de la cancelación
 
@@ -374,7 +371,7 @@ La librería permite consultar uno o varios Folios Fiscales para revisar el  est
 En ese lapso de 72 horas de manera automática se podrá actualizar el estatus del CFDI por lo que se requiere periodicamente consultar el servicio para validar el estatus actual del CFDI. No se recomienda hacerlo con una periodicidad menor a 1 hora ya que el SAT tarda de igual manera de 1 a 72 horas en ver reflejado el cambio de estatus. Asi que se sugiere que manden a llamar este servicio con un lapso mayor a 1 hora cada vez, antes de ese tiempo será en vano consultar el estatus del CFDI.
 
 ```csharp
- private static void ConsultarEstatusUUID()
+  private static void ConsultarEstatusUUID()
         {
             ConsultaEstatusPeticion Peticion = new ConsultaEstatusPeticion();
 
@@ -382,11 +379,11 @@ En ese lapso de 72 horas de manera automática se podrá actualizar el estatus d
             Peticion.Password = "@Notiene1"; // Es la contraseña del usuario cuando se registró
 
             Peticion.UUIDs = new List<string>();
-            Peticion.UUIDs.Add(UUID); // Aca se pueden agregar N folios fiscales
+            Peticion.UUIDs.Add(UUID);
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
             
             Console.WriteLine("Inicio de consulta " + DateTime.Now);
@@ -432,7 +429,7 @@ Como tenemos varios paquetes con características distintas en cuanto a uso y pr
 
             #region "Realiza la cancelación"
 
-            FacturoPorTi.CFDI.Api.ComprobanteDigital comprobante = new CFDI.Api.ComprobanteDigital();
+            FacturoPorTi.Api.Cfdi.ComprobanteDigital comprobante = new FacturoPorTi.Api.Cfdi.ComprobanteDigital();
             comprobante.SandBox = true; // True = pruebas,  False= Productivo
 
             Console.WriteLine("Inicio de consulta de timbres restantes " + DateTime.Now);
@@ -470,7 +467,7 @@ En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoport
 
 2. Clona el repositorio
 
-    git clone git@github.com:yourUserName/factura-electronica-dll.git
+    git clone git@github.com:yourUserName/factura-electronica-Dll-Api-Rest.git
 
 3. Crea una rama 
 ```
@@ -493,5 +490,5 @@ En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoport
 
 ## License
 
-Desarrollado en México por [FacturoPorTi](https://www.FacturoPorTi.com). Available with [MIT License](LICENSE).
+Desarrollado en México por [FacturoPorTi](https://www.FacturoPorTi.com.mx). Licencia de uso [Ver mas](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest/blob/master/Licencia).
 ****
