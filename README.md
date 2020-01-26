@@ -29,7 +29,7 @@ La librería tiene como requerimientos:
 
 Además revisa la versión de framework que necesitas de acuerdo a tu proyecto:
 
-![alt text](FrameworkSupport.png)
+![Versión Framework](FrameworkSupport.PNG)
 
 ## Instalación
 
