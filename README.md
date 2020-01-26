@@ -8,7 +8,7 @@
 
 </div>
 
-Librería en **.Net Standard** que permite generar cualquier tipo de comprobante digital ** Ingreso, Egreso, Traslado, Nomina, Pago, etc.(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
+Librería en **.Net Standard** que permite generar cualquier tipo de comprobante digital **Ingreso, Egreso, Traslado, Nomina, Pago, etc.(Xml y PDF)** llenando los datos correspondientes fácilmente podrás generar las facturas digitales en cuestión de minutos. 
 
 **Es ideal y compatible para integrarla en cualquier tipo de proyecto ya sean aplicaciones web, escritorio, moviles (Mono, Xamarin), silverligth, WPF, .Net Core, Universal Windows Platform, Unity, etc.** usa la librería directamente en el proyecto o agrega la referencia usando - [NuGet Package](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi)
 
