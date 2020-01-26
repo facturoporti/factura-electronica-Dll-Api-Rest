@@ -24,15 +24,14 @@ Se recomienda usar el IDE de desarrollo Visual Studio 2015 o 2017 community o su
 
 La librería tiene como requerimientos: 
 
-** .Net Framework 4.6.1 en adelante**
-** Newtonsoft.Json 12.0.3 en adelante**
-** Portable.BouncyCastle 1.8.5.2 en adelante**
+- **.Net Framework 4.6.1 en adelante**
+- **Newtonsoft.Json 12.0.3 en adelante**
+- **Portable.BouncyCastle 1.8.5.2 en adelante**
 
 ## Instalación
 
-Obten la última versión de la librería de  timbrado de FacturoPorTi  en** NuGet**:
-**
-[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi "FacturoPorTi.Api.Cfdi")**
+Obten la última versión de la librería de  timbrado de FacturoPorTi  en **NuGet**:
+**[FacturoPorTi.CFDI](https://www.nuget.org/packages/FacturoPorTi.Api.Cfdi "FacturoPorTi.Api.Cfdi")**
 
 En [GitHub - FacturoPorTi-Factura-Electronica-dll](https://github.com/facturoporti/factura-electronica-Dll-Api-Rest "GitHub - FacturoPorTi-Factura-Electronica-dll") esta un proyecto de ejemplo completo del uso de todos los métodos de la librería; te recomendamos ampliamente que lo descargues y hagas pruebas con el.  
 
@@ -307,11 +306,11 @@ using FacturoPorTi.CFDI.Genericos;
 
 ## Probar Timbrado CFDI
 
-Si usas el proyecto con el código de ejemplo ** Ejecuta o depura la aplicación ** automáticamente se generará el Xml y PDF con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
+Si usas el proyecto con el código de ejemplo **Ejecuta o depura la aplicación** automáticamente se generará el Xml y PDF con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
 
 Revisa el objeto de respuesta CFDITimbradoRespuesta en el encontraras tanto el XML, PDF, timbre fiscal, estatus, errores, etc. **Todo codigo de error diferente de "000" indica algún tipo de error ** que se debe de revisar y corregir.
 
-Los atributos ** CFDIXML, TimbreXML y PDF estan en Base64 ** se deberán de convertir a texto para obtener el XML y/o timbre del CFDI, en el caso del PDF lo podrán guardar o convertir de manera binaria para obtener la representación impresa. Esto ya se hace en el proyecto de ejemplo.
+Los atributos **CFDIXML, TimbreXML y PDF estan en Base64** se deberán de convertir a texto para obtener el XML y/o timbre del CFDI, en el caso del PDF lo podrán guardar o convertir de manera binaria para obtener la representación impresa. Esto ya se hace en el proyecto de ejemplo.
 
 ## Cancelar
 
@@ -365,7 +364,7 @@ La librería permite mandar uno o varios Folios Fiscales para cancelar al mismo 
 
 ## Probar Cancelación de CFDI
 
-Si usas el proyecto con el código de ejemplo ** Ejecuta o depura la aplicación ** automáticamente se enviará la cancelación con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
+Si usas el proyecto con el código de ejemplo **Ejecuta o depura la aplicación** automáticamente se enviará la cancelación con los datos que ingresaste (es una aplicación de consola que te sirve para depurar la información que envias y recibes). En caso de que lo integres a tu solución recuerda tener las referencias correspondientes a los requerimientos especificados anterioremente. 
 
 ## Consultar Estatus de la cancelación
 
