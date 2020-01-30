@@ -4,8 +4,8 @@ namespace FacturoPorTi.Api.Cfdi
 {
     public class ConsultaTimbresRestantesRespuesta : WCFRespuesta
     {
-        private Nullable<DateTime> _FechaCompra;
-        public Nullable<DateTime> FechaCompra
+        private string _FechaCompra;
+        public string FechaCompra
         {
             get
             {

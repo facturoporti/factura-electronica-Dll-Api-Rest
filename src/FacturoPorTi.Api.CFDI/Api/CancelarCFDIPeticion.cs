@@ -22,6 +22,10 @@ namespace FacturoPorTi.Api.Cfdi
         public string PFXPassword { get; set; }
         public List<string> UUIDs { get; set; }
 
+        public string Certificado { get; set; }
+        public string LlavePrivada { get; set; }
+        public string CertificadoPassword { get; set; }
+
         #endregion "Variables publicas"
     }
 }
