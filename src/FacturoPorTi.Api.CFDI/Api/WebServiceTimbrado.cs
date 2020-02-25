@@ -59,12 +59,12 @@ namespace FacturoPorTi.Api.Cfdi
 
 #if DEBUG
             //Url = "http://localhost:52860/Servicios.svc/" + controlador;
-           Url = "http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
+           Url = "https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
 #else
             if (EsSandBox == false)
-                Url = "http://wcf.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
+                Url = "https://wcf.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
             else
-                Url = "http://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
+                Url = "https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
 
 #endif
 
