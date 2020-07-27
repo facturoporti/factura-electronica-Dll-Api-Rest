@@ -58,7 +58,7 @@ namespace FacturoPorTi.Api.Cfdi
             #region "Asigna URL"        
 
 #if DEBUG
-            //Url = "http://localhost:52860/Servicios.svc/" + controlador;
+           //Url = "http://localhost:52860/Servicios.svc/" + controlador;
            Url = "https://wcfpruebas.facturoporti.com.mx/Timbrado/Servicios.svc/" + controlador;
 #else
             if (EsSandBox == false)

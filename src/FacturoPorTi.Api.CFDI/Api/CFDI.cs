@@ -134,7 +134,7 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (Peticion.Encabezado.Emisor != null)
             {
-                utilerias.ValidaRFC(Peticion.Encabezado.Emisor.RFC);
+                Resultado = utilerias.ValidaRFC(Peticion.Encabezado.Emisor.RFC);
                 if (Resultado == false)
                 {
                     Mensaje = "El RFC del emisor es incorrecto";
@@ -149,7 +149,7 @@ namespace FacturoPorTi.Api.Cfdi
             
             if (Peticion.Encabezado.Receptor != null)
             {
-                utilerias.ValidaRFC(Peticion.Encabezado.Receptor.RFC);
+                Resultado = utilerias.ValidaRFC(Peticion.Encabezado.Receptor.RFC);
                 if (Resultado == false)
                 {
                     Mensaje = "El RFC del receptor es incorrecto";
@@ -164,7 +164,7 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (!string.IsNullOrEmpty(Peticion.DatosGenerales.ReceptorEmail))
             {
-                utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmail);
+                Resultado = utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmail);
                 if (Resultado == false)
                 {
                     Mensaje = "El email del destinatario es incorrecto";
@@ -174,7 +174,7 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (!string.IsNullOrEmpty(Peticion.DatosGenerales.ReceptorEmailCC))
             {
-                utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmailCC);
+                Resultado = utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmailCC);
                 if (Resultado == false)
                 {
                     Mensaje = "El email de la copia es incorrecto";
@@ -184,7 +184,7 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (!string.IsNullOrEmpty(Peticion.DatosGenerales.ReceptorEmailCCO))
             {
-                utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmailCCO);
+                Resultado = utilerias.ValidaCorreos(Peticion.DatosGenerales.ReceptorEmailCCO);
                 if (Resultado == false)
                 {
                     Mensaje = "El email de la copia oculta es incorrecto";
