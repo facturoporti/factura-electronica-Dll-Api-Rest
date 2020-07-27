@@ -160,6 +160,7 @@ namespace FacturoPorTi.Api.Cfdi.Seguridad
                 if (core.Result == false)
                 {
                     Mensaje = core.UserMessage;
+                    result = false;
                 }
 
                 if (result)

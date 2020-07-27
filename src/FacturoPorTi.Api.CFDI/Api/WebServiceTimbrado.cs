@@ -21,6 +21,7 @@ namespace FacturoPorTi.Api.Cfdi
         public string Codigo { get; set; }
         private const int TiempoEspera = 300000; // 5 minutos de espera para descargar 
         public bool ErrorConexion { get; set; }
+        public string MensajeError { get; set; }
 
         #endregion "Variables"
 
@@ -54,7 +55,9 @@ namespace FacturoPorTi.Api.Cfdi
         #region "Metodos públicos"
 
         public T2 ConsumeServicio<T1, T2>(string controlador, TipoVerboHttp metodo, T1 objeto)
-        {            
+        {
+            MensajeError = string.Empty; 
+
             #region "Asigna URL"        
 
 #if DEBUG
@@ -129,6 +132,7 @@ namespace FacturoPorTi.Api.Cfdi
             }
             catch (WebException ew)
             {
+                MensajeError = ew.Message + Environment.NewLine + (ew.InnerException != null ? ew.InnerException.Message : "");
                 if (ew.Status == WebExceptionStatus.ProtocolError)
                 {
                     var response = ew.Response as HttpWebResponse;
@@ -183,7 +187,8 @@ namespace FacturoPorTi.Api.Cfdi
                 }                              
             }
             catch (Exception ex)
-            {                
+            {
+                MensajeError = ex.Message + Environment.NewLine + (ex.InnerException != null ? ex.InnerException.Message : "");
                 ex = ex;
             }
 

@@ -34,6 +34,7 @@ namespace FacturoPorTi.Api.Cfdi
         /// Almacena los mensajes del sistema
         /// </summary>
         public string Mensaje { get; set; }
+        public string MensajeError { get; set; }
         /// <summary>
         /// Es el objeto del timbre generado junto con el XML y PDF
         /// </summary>
@@ -97,7 +98,7 @@ namespace FacturoPorTi.Api.Cfdi
         public bool GeneraCFDI(CFDIPeticion Peticion, Byte[] Certificado, Byte[] LlavePrivada, string ContraseñaCertificado)
         {
             #region "Variables"
-
+            MensajeError = string.Empty;
             Mensaje = string.Empty;
             Resultado = false;
             AdministradorArchivos = new Archivos();
@@ -200,18 +201,21 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (Timbrado != null)
             {
+                MensajeError = Api.MensajeError;
+
                 if (Timbrado.Estatus.Codigo == "000")
                 {                    
                     Resultado = true;
                     Mensaje = "Factura generada correctamente";
                 }
                 else
-                {
+                {    
                     Mensaje = Timbrado.Estatus.Descripcion + Environment.NewLine + Environment.NewLine + Timbrado.Estatus.InformacionTecnica;
                 }
             }
             else
             {
+                MensajeError = Api.MensajeError;
                 Mensaje = "No se pudo realizar el timbrado si el problema persiste comuniquese a soporte@facturoporti.com.mx";
             }
 
@@ -257,7 +261,7 @@ namespace FacturoPorTi.Api.Cfdi
         public bool CancelarCFDI(CancelarCFDIPeticion Peticion, Byte[] Certificado, Byte[] LlavePrivada, string ContraseñaCertificado)
         {
             #region "Variables"
-
+            MensajeError = string.Empty;
             Mensaje = string.Empty;
             Resultado = false;
             AdministradorArchivos = new Archivos();
@@ -297,6 +301,8 @@ namespace FacturoPorTi.Api.Cfdi
 
             if (Cancelaciones != null)
             {
+                MensajeError = Api.MensajeError;
+
                 if (Cancelaciones.Estatus.Codigo == "000")
                 {
                     Resultado = true;
@@ -309,6 +315,7 @@ namespace FacturoPorTi.Api.Cfdi
             }
             else
             {
+                MensajeError = Api.MensajeError;
                 Mensaje = "No se pudo realizar la cancelación si el problema persiste comuniquese a soporte@facturoporti.com.mx";
             }
 
