@@ -10,7 +10,7 @@
 
 ## Actualizacion importante de nueva API 1 de abril 2021
 
-**Estos servicios dejarán de estar disponible a partir del 1 de abril del 2021**, la nueva versión de la api tiene estos y mas herramientas que te facilitarán y ahorran mucho tiempo en validaciones o penalizaciones del sat en auditorías, te recomendamos ampliamente revisar la nueva documentación en https://developers.facturoporti.com.mx/reference/api-desarrollo-facturoporti como parte de las nuevas características podrás:
+**Estos servicios dejarán de estar disponible a partir del 1 de abril del 2021**, la nueva versión de la api tiene estos y mas herramientas que te facilitarán y ahorran mucho tiempo en validaciones o penalizaciones del sat en auditorías, te recomendamos ampliamente revisar la nueva documentación en https://developers.facturoporti.com.mx/reference/api-facturacion-electronica como parte de las nuevas características podrás:
 
 - Puedes realizar consultas o descargas de los catálogos del sat actualizados.
 - Timbra cualquier tipo de cfdi con json o xml
@@ -33,7 +33,7 @@
 
 Dependiendo del entorno en que estés debes de utilizar sandbox o producción.
 
-**¿Necesitas ayuda o requieres contratar los servicios?** Envíanos un email a soporte@facturoporti.com.mx ventas@facturoporti.com.mx, dirígete a la página https://www.facturoporti.com.mx platica con nosotros en línea o llámanos a los teléfonos 555 546 2288 o al 558 421 7675 con mucho gusto podremos darte lo que necesitas. 
+**¿Necesitas ayuda o requieres contratar los servicios?** Envíanos un email a soporte@facturoporti.com.mx ventas@facturoporti.com.mx, dirígete a la página https://www.facturoporti.com.mx/api-de-facturacion-electronica/ platica con nosotros en línea o llámanos a los teléfonos 555 546 2288 o al 558 421 7675 con mucho gusto podremos darte lo que necesitas. 
 
 ## Introducción
 
@@ -487,11 +487,11 @@ Como tenemos varios paquetes con características distintas en cuanto a uso y pr
 ```
 ## Documentación Adicional
 
-Si deseas conocer mas opciones de como generar cualquier tipo de CFDI lee la documentación con el **diccionario de datos** que contiene todos los atributos y su descripción de los valores que se permiten http://software.facturoporti.com.mx/TaaS/Diccionario/Rest-Api-V-2.3.7.xlsx
+Si deseas conocer mas opciones de como generar cualquier tipo de CFDI lee la documentación con el **diccionario de datos** que contiene todos los atributos y su descripción de los valores que se permiten https://developers.facturoporti.com.mx/reference/api-facturacion-electronica
 
 ## ¿Tienes dudas? 
 
-En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoporti.com.mx o ingresa a [FacturoPorTi](https://www.facturoporti.com.mx/timbrado/ "Contáctanos")  para ayudarte con tus necesidades.
+En caso de que necesites ayuda o tengas dudas contáctanos a soporte@facturoporti.com.mx o ingresa a [FacturoPorTi](https://www.facturoporti.com.mx/api-de-facturacion-electronica/ "Contáctanos")  para ayudarte con tus necesidades.
 
 ## Contribuir
 
